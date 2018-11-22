@@ -1,25 +1,15 @@
-
-//document.addEventListener("deviceready", onDeviceReady, false);
-//
-//// device APIs are available
-//function onDeviceReady() {
-//
-//
-//    alert("device ready");
-//}
+$(document).on("pagecreate","#pageone",function(){
+  $('#submitButton').on("click", function(){
+    submitText();
+  });            
+});            
 
 
+function submitText() {
+	var text = $('#textinput').val();
+	alert(text);
+}
 
-$( document ).ready(function() {
-    
-    var key = "pen";
-    var value ="blue";
-    
-    window.localstorage.setitem(key, value );
-    
-    var key = "pen";
-    var value = window.localstorage.getitem(key); 
-    
-
-    console.log( "ready!" );
-});
+function storeValue(key, value) {
+	//add some code to store the key-value pair in persistant storage 
+}
